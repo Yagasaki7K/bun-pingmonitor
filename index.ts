@@ -12,6 +12,8 @@ const pingHost = async () => {
 
   if (!res.alive) {
     lostPings++;
+  } else {
+      lostPings = 0;
   }
 
   const packetLoss = (lostPings / sentPings) * 100;
